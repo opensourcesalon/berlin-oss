@@ -1,4 +1,56 @@
 ---
-layout: home
-author_profile: true
+layout: splash
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  # overlay_image: /assets/images/shayne-house-ZSh_LigA14k-unsplash.jpg
+  overlay_image: /assets/images/alessandro-bellone-lVcvwLLofRg-unsplash.jpg
+  actions:
+    - label: "Register"
+      url: "#register"
+  # caption: "Photo credit: [Shayne House/Unsplash](https://unsplash.com/photos/ZSh_LigA14k)"
+  caption: "Photo credit: [Alessandro Bellone/Unsplash](https://unsplash.com/photos/lVcvwLLofRg)"
+excerpt: 'The **Berlin Open Source Salon** is a half day conference exploring the changing nature of open source in 2019. New licenses, new attitudes, and new ideologies. Crypto vs. Open Source. Venture Investing & Open Source. Going beyond code licenses - portable data, data ethics, and more.'
+feature-presenting:
+  - image_path: /assets/images/cherryventures.jpg
+    alt: "Cherry Ventures"
+    excerpt: 'The Berlin Open Source Salon is proudly presented by Cherry Ventures.'
+    url: "http://www.cherry.vc"
+  - image_path: /assets/images/bbw.png
+    excerpt: 'Part of Berlin Blockchain Week'
+    url: "https://www.blockchainweek.berlin/"
+  - image_path: /assets/images/fission.png
+    excerpt: 'Produced by FISSION'
+    url: https://fission.codes
+#sidebar:
+#  - title: "Presented by Cherry Ventures"
+    # image: /assets/images/cherryventures.jpg
+    # image_alt: "Cherry Ventures Logo"
+#    text: '<a href="http://www.cherry.vc"><img src="/assets/images/cherryventures.jpg" alt="Cherry Ventures Logo"/></a>'
+#  - title: "Part of Berlin Blockchain Week"
+#    text: '<a href="https://www.blockchainweek.berlin/"><img src="/assets/images/bbw.png" alt="Berlin Blockchain Week Logo"/></a>'
 ---
+
+<div class="notice--info">
+{% for post in paginator.posts limit: 1 %}
+  {% include archive-single.html %}
+{% endfor %}
+</div>
+
+<h2 id="register">Register</h2>
+
+<p>Interested in attending? Leave us your email and we'll let you know when registration opens!</p>
+<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/hello@fission.codes" method="post">
+  <fieldset id="fs-frm-inputs">
+    <label for="email-address">Email Address</label>
+    <input type="email" name="_replyto" id="email-address" placeholder="you@example.com" required="">
+    <input type="hidden" name="_subject" id="email-subject" value="BOSS Form Submission">
+  </fieldset>
+  <input type="submit" value="Sign Up">
+</form>
+
+<hr style="padding-bottom: 0.5em; padding-top: 1em"/>
+
+{% include feature_row id="feature-presenting" %}
+
+
