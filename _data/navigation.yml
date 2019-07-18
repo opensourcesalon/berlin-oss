@@ -4,6 +4,8 @@ main:
     url: /#register
   - title: "Venue"
     url: /#venue
+  - title: "Speakers"
+    url: /#speakers
   - title: "Agenda"
     url: /#agenda
   - title: "Organizers"
