@@ -1,27 +1,44 @@
 ---
 layout: splash
-title: Berlin Open Source Salon - Aug 29th, 2019
+title: "Berlin<br/>Open Source<br/>Salon"
+date: Aug 29th, 2019
 header:
-  overlay_color: rgb(205,100,30);
-excerpt: 'The **Berlin Open Source Salon** is a half day conference exploring the changing nature of open source. New licenses, new attitudes, and new ideologies. Crypto vs. Open Source. Venture Investing & Open Source. Going beyond code licenses - portable data, data ethics, and more.'
+  overlay_color: rgb(255, 158, 127);
+excerpt: 'A half day conference exploring the changing nature of open source. New licenses, new attitudes, and new ideologies. Crypto vs. Open Source. Venture Investing & Open Source. Going beyond code licenses - portable data, data ethics, and more.'
 feature-logo:
-  - image_path: /assets/images/brownbearpenguin-white-squarecrop.png
+  - image_path: /assets/images/bear-penguin.svg
     image_alt: "A Berlin bear drinking mate discussing with an open source penguin"
-    excerpt: "_Cherry Ventures and FISSION are collaborating to host the first Open Source Salon: an event to discuss open source and it's place in the world of software and beyond in 2019. Scheduled at the end of Berlin Blockchain Week, we will connect the worlds of crypto and open source -- including exploring the tension that occasionally exists between them!_"
+    class: "feature__item--overlap"
+    excerpt: >
+      <p>Cherry Ventures and FISSION are collaborating to host the first Open Source Salon: an event to discuss open source and its place in the world and beyond in 2019.</p>
+
+      <p>Scheduled at the end of <a href="https://www.blockchainweek.berlin">Berlin Blockchain Week</a>, we will connect the worlds of crypto and open source -- including exploring the tension that occasionally exists between them!</p>
+
+      <a href="#register" class="btn btn--primary">Register</a>
 feature-presenting:
-  - image_path: /assets/images/cherryventures.jpg
+  - image_path: /assets/images/cherryventures.png
     alt: "Cherry Ventures"
     excerpt: 'The Berlin Open Source Salon is proudly presented by Cherry Ventures.'
     url: "http://www.cherry.vc"
+    class: "text-center"
   - image_path: /assets/images/bbw.png
     excerpt: 'Part of Berlin Blockchain Week'
     url: "https://www.blockchainweek.berlin/"
+    class: "text-center"
   - image_path: /assets/images/fission.png
     excerpt: 'Produced by FISSION'
     url: https://fission.codes
+    class: "text-center"
+split-pane-register:
+  - first: >
+      <h2>Would you like to pay with crypto?</h2>
+      <p>We are <a href="https://tickets.unlock-protocol.com/event/0x98c0cbF0e9525f1a6975A51c9D5E8e063c034D6D">accepting DAI using Unlock Protocol »</a></p>
+    second: >
+      <h2>Need a student ticket?</h2>
+      <p>We are happy to support students and other individuals who have financial hardship and would still like to attend. Please <a href="https://ti.to/open-source-salon/berlin2019/with/o5zy-tvy354">register directly for a student ticket »</a></p>
 ---
 
-{% include feature_row id="feature-logo" type="center" %}
+{% include feature_row id="feature-logo" type="left" %}
 
 {% comment %}
 <h2 id="updates">Updates</h2>
@@ -32,111 +49,122 @@ feature-presenting:
 </div>
 {% endcomment %}
 
-<h2 id="register">Register</h2>
+<figure class="image-with-overlay" id="venue">
+  <img src="/assets/images/Freunde-von-Freunden-The-Sooner-Now-2451-1600x1068.jpg" />
+  <div class="image-with-overlay__overlay">
+    <h2>Venue</h2>
+    <p>We're hosted at the wonderful <strong>Friends Space</strong> in Kreuzberg, Glogauer Str. 2</p>
+    <a href="https://goo.gl/maps/VgpYDifMn1vjyest8" class="btn btn--light-outline">View Map</a>
+  </div>
+</figure>
 
-<tito-widget event="open-source-salon/berlin2019"></tito-widget>
+<div class="wrapper">
+  <h2 id="speakers">Speakers</h2>
 
-<p>Would you like to pay with crypto? We are <a href="https://tickets.unlock-protocol.com/event/0x98c0cbF0e9525f1a6975A51c9D5E8e063c034D6D">accepting DAI using Unlock Protocol »</a></p>
+  <ul class="speakers-list">
+    <li class="speakers-list__speaker">
+    <img src="/assets/images/speakers/elef.jpg"/>
+    <h3>Coordination problems, FOSS and crypto-currencies</h3>
+    <h4>Eleftherios Diakomichalis, OSCoin</h4>
+    <p>Eleftherios is the cofounder of Monadic, building <a href="https://oscoin.io">OSCoin</a> and <a href="https://radicle.xyz">Radicle</a>. Find him on Twitter <a href="https://twitter.com/lftherios">@lfttherios</a>.</p>
+    </li>
 
-<p>We are happy to support students and other individuals who have financial hardship and would still like to attend. Please <a href="https://ti.to/open-source-salon/berlin2019/with/o5zy-tvy354">register directly for a student ticket »</a></p>
-
-<h2 id="venue">Venue</h2>
-
-<p>We're hosted at the wonderful <strong>Friends Space</strong> in Kreuzberg, Glogauer Str. 2 (<a href="https://goo.gl/maps/VgpYDifMn1vjyest8">map</a>)</p>
-
-<img src="/assets/images/Freunde-von-Freunden-The-Sooner-Now-2451-1600x1068.jpg" />
-
-<h2 id="speakers">Speakers</h2>
-
-<style>
-.speakerinfo {
-  padding-bottom: 20px;
-}
-
-.speakerinfo:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.speakerinfo img {
-  height: 128px;
-  padding-right: 20px; 
-  float: left;
-}
-
-.speakerinfo p {
-  font-size: smaller;
-}
-
-.speakerinfo h3, .speakerinfo h4 {
-  padding-top: 0px;
-  padding-bottom: 5px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-</style>
-
-<div class="speakerinfo">
-<img src="/assets/images/speakers/elef.jpg"/>
-<h3>Coordination problems, FOSS and crypto-currencies</h3>
-<h4>Eleftherios Diakomichalis, OSCoin</h4>
-<p>Eleftherios is the cofounder of Monadic, building <a href="https://oscoin.io">OSCoin</a> and <a href="https://radicle.xyz">Radicle</a>. Find him on Twitter <a href="https://twitter.com/lftherios">@lfttherios</a>.</p>
-</div>
-
-<div class="speakerinfo">
-    <img src="/assets/images/speakers/dandelion-mane.jpeg"/>
-<h3>SourceCred: Building an Open Source Economy</h3>
-<h4>Dandelion Mane, Protocol Labs</h4>
-<p>Dandelion has led development on a few different open-source software projects: SourceCred, TensorBoard (component of TensorFlow), and Plottable.js. Right now their main focus is on SourceCred and SourceGrain, a pair of projects that aim to create a sustainable funding model for open-source. They are a software engineer at <a href="https://protocol.ai/">Protocol Labs</a>, find them on Twitter <a href="https://twitter.com/decentralion">@decentralion</a>.</p>
-</div>
-
-<div class="speakerinfo">
+    <li class="speakers-list__speaker">
+        <img src="/assets/images/speakers/dandelion-mane.jpeg"/>
+    <h3>SourceCred: Building an Open Source Economy</h3>
+    <h4>Dandelion Mane, Protocol Labs</h4>
+    <p>Dandelion has led development on a few different open-source software projects: SourceCred, TensorBoard (component of TensorFlow), and Plottable.js. Right now their main focus is on SourceCred and SourceGrain, a pair of projects that aim to create a sustainable funding model for open-source. They are a software engineer at <a href="https://protocol.ai/">Protocol Labs</a>, find them on Twitter <a href="https://twitter.com/decentralion">@decentralion</a>.</p>
+    </li>
+    
+    <li class="speakers-list__speaker">
     <img src="/assets/images/speakers/paul.jpeg"/>
 <h3>Open Source in Science & Pharma: From Patents to Open Markets</h3>
 <h4>Paul Kohlhaas, Molecule</h4>
 <p>Paul is the CEO & Co-founder of <a href="https://molecule.to/">Molecule</a>, find them on Twitter <a href="https://twitter.com/paulkhls">@paulkhls</a>.</p>
+</li>
+
+    <li class="speakers-list__speaker">
+      <h3>Panel: Open Source & Venture Investing</h3>
+      <h4>Moderator: <a href="https://www.linkedin.com/in/patrick-mayr-0bab7b14b/">Patrick Mayr</a>, Cherry Ventures</h4>
+      <p>Open source software has always underpinned the infrastructure of the Internet and other parts of the economy at large. Yet up until recently parts of the investor community looked at the open source business model with skepticism. The emergence and exits of large companies such as Red Hat, Mulesoft, MongoDB, Elastic, Github etc., have demonstrated not only the viability, but enormous potential of the industry. Crypto, a new asset class built entirely on open source software has received unprecedented sums of money from investors. We’ll be chatting to investors to get their take.</p>
+    </li>
+  </ul>
 </div>
 
-<div class="speakerinfo">
-<h3>Panel: Open Source & Venture Investing</h3>
-<h4>Moderator: <a href="https://www.linkedin.com/in/patrick-mayr-0bab7b14b/">Patrick Mayr</a>, Cherry Ventures</h4>
 
-<p>Open source software has always underpinned the infrastructure of the Internet and other parts of the economy at large. Yet up until recently parts of the investor community looked at the open source business model with skepticism. The emergence and exits of large companies such as Red Hat, Mulesoft, MongoDB, Elastic, Github etc., have demonstrated not only the viability, but enormous potential of the industry. Crypto, a new asset class built entirely on open source software has received unprecedented sums of money from investors. We’ll be chatting to investors to get their take.</p>
+<div class="content-block content-block--primary">
+
+  <div class="wrapper">
+
+    <h2 id="agenda">Agenda</h2>
+
+    <p>We're working on our agenda and speakers. This will be a half day afternoon conference, with some drinks and networking to follow. The date of the event is <strong>August 29th, 2019</strong>.</p>
+
+    <p>In the evening from 20:00, we have the space available until 23:00 and welcome people to come by to celebrate the end of Berlin Blockchain Week &mdash; do demos, hack on code, have a project contributor meeting &mdash; anything that connects with open source.</p>
+
+    <table>
+      <thead class="visually-hidden">
+        <tr>
+          <th>Time</th>
+          <th>Presentation</th>
+          <th>Speaker</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>14:00</td>
+          <td class="highlight">Registration & Check-in</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>14:30</td>
+          <td>Opening Remarks</td>
+          <td>Patrick Mayr, Cherry Ventures<br />Boris Mann, FISSION</td>
+        </tr>
+        <tr>
+          <td>16:15</td>
+          <td class="highlight">Lemonade Break</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>18:30</td>
+          <td>Closing Remarks</td>
+          <td>Patrick Mayr, Cherry Ventures<br />Boris Mann, FISSION</td>
+        </tr>
+        <tr>
+          <td>18:45</td>
+          <td class="highlight">Drinks, Snacks, & Networking</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>20:00</td>
+          <td class="highlight">Open Space, all are welcome until 23:00</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><small>We're still working on our agenda and speakers.</small></p>
+
+  </div>
+
 </div>
 
-<h2 id="agenda">Agenda</h2>
+<div class="wrapper" id="organizers">
 
-<p>We're working on our agenda and speakers. This will be a half day afternoon conference, with some drinks and networking to follow. The date of the event is <strong>August 29th, 2019</strong>.</p>
+  <h2>Organizers</h2>
 
-<p>In the evening from 20:00, we have the space available until 11pm and welcome people to come by to celebrate the end of Berlin Blockchain Week: do demos, hack on code, have a project contributor meeting -- anything that connects with open source.</p>
+  <div class="organizers-list">
+    {% include feature_row id="feature-presenting" %}
+  </div>
 
-<table>
-  <tr>
-    <th>Time</th><th>Speaker</th><th>Presentation</th>
-  </tr>
-  <tr>
-    <td>14:00</td><td colspan="2" style="text-align:center; text-transform: uppercase; font-weight: 700">Registration & Check-in</td>
-  </tr>
-  <tr>
-    <td>14:30</td><td>Opening Remarks</td><td>Opening remarks and welcome to the event with Patrick Mayr (Cherry Ventures) and Boris Mann (FISSION)</td>
-  </tr>
-  <tr>
-    <td>16:15</td><td colspan="2" style="text-align:center; text-transform: uppercase; font-weight: 700">Lemonade Break</td>
-  </tr>
-  <tr>
-    <td>18:30</td><td>Closing Remarks</td><td>Closing remarks and thank you to speakers & attendees, with Patrick Mayr (Cherry Ventures) and Boris Mann (FISSION)</td>
-  </tr>
-  <tr>
-    <td>18:45</td><td colspan="2" style="text-align:center; text-transform: uppercase; font-weight: 700">Drinks, Snacks, & Networking</td>
-  </tr>
-  <tr>
-    <td>20:00</td><td colspan="2" style="text-align:center; text-transform: uppercase; font-weight: 700">Open Space, all are welcome until 23:00</td>
-  </tr>
-</table>
+</div>
 
-<h2 id="organizers">Organizers</h2>
+<section id="register">
+  <div class="wrapper">
+    <h2>Register</h2>
+    <tito-widget event="open-source-salon/berlin2019"></tito-widget>
+  </div>
 
-{% include feature_row id="feature-presenting" %}
-
-
+  {% include split-pane.html id="split-pane-register" %}
+</section>

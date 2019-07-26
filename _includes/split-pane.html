@@ -1,0 +1,20 @@
+{% if include.id %}
+  {% assign split_pane_row = page[include.id] %}
+{% else %}
+  {% assign split_pane_row = page.split_pane_row %}
+{% endif %}
+
+{% for f in split_pane_row %}
+
+	<div class="split-pane">
+		<div class="split-pane__wrapper">
+			<div class="split-pane__item">
+				{{ f.first }}
+			</div>
+			<div class="split-pane__item">
+				{{ f.second }}
+			</div>
+		</div>
+	</div>
+
+{% endfor %}

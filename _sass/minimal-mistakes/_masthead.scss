@@ -3,8 +3,11 @@
    ========================================================================== */
 
 .masthead {
+  background: $primary-color;
   position: relative;
-  border-bottom: 1px solid $border-color;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
@@ -37,10 +40,30 @@
       text-decoration: none;
     }
   }
+
 }
 
 .site-logo img {
-  max-height: 2rem;
+  max-height: 3rem;
+  transition: transform .25s ease-in-out;
+  transform: rotate(0);
+  will-update: transform;
+}
+
+.site-logo:hover img {
+  animation: bounce .5s ease-in-out 0 infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  100% { transform: rotate(2deg)}
 }
 
 .site-title {
@@ -51,6 +74,8 @@
   align-self: center;
   font-weight: bold;
   z-index: 20;
+
+  display: none !important;
 }
 
 .masthead__menu {

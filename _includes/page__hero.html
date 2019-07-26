@@ -39,11 +39,15 @@
         {% if paginator and site.paginate_show_page_num %}
           {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
         {% else %}
-          {{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
+          {{ page.title | default: site.title | markdownify | remove: '<p>' | remove: '</p>' }}
         {% endif %}
       </h1>
       {% if page.header.show_overlay_excerpt != false and page.excerpt %}
-        <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        <div class="page__lead">
+          <strong>{{ page.date }}</strong>
+          <hr />
+          {{ page.excerpt | markdownify }}
+        </div>
       {% endif %}
       {% if page.read_time %}
         <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>

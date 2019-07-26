@@ -134,6 +134,7 @@ body:hover .visually-hidden button {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  max-width: $max-width;
 }
 
 /*
@@ -326,7 +327,7 @@ body:hover .visually-hidden button {
   position: relative;
   width: $navicon-width;
   height: $navicon-height;
-  background: $primary-color;
+  background: $info-color;
   margin: auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -335,20 +336,21 @@ body:hover .visually-hidden button {
   &:after {
     content: "";
     position: absolute;
-    left: 0;
-    width: $navicon-width;
+    right: 0;
     height: $navicon-height;
-    background: $primary-color;
+    background: $info-color;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
 
   &:before {
-    top: (-2 * $navicon-height);
+    width: $navicon-width * 0.5;
+    top: (-4 * $navicon-height);
   }
 
   &:after {
-    bottom: (-2 * $navicon-height);
+    width: $navicon-width * 0.75;
+    bottom: (-4 * $navicon-height);
   }
 }
 
@@ -381,7 +383,7 @@ body:hover .visually-hidden button {
   .navicon,
   .navicon:before,
   .navicon:after {
-    background: mix(#000, $primary-color, 25%);
+    background: mix(#fff, $info-color, 50%);
   }
 
   &.close {

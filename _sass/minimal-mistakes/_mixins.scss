@@ -90,3 +90,13 @@
   background-color: $background-color;
   color: yiq-contrast-color($background-color, $dark, $light, $threshold);
 }
+
+/*
+   Split pane
+   ========================================================================== */
+
+@mixin split-pane {
+  @include breakpoint($medium) {
+    background: linear-gradient(90deg, $primary-color 50%, $info-color 50%) !important;
+  }
+}
