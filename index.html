@@ -16,16 +16,19 @@ feature-logo:
 
       <a href="#register" class="btn btn--primary">Register</a>
 feature-presenting:
-  - image_path: /assets/images/cherryventures.jpg
+  - image_path: /assets/images/cherryventures.png
     alt: "Cherry Ventures"
     excerpt: 'The Berlin Open Source Salon is proudly presented by Cherry Ventures.'
     url: "http://www.cherry.vc"
+    class: "text-center"
   - image_path: /assets/images/bbw.png
     excerpt: 'Part of Berlin Blockchain Week'
     url: "https://www.blockchainweek.berlin/"
+    class: "text-center"
   - image_path: /assets/images/fission.png
     excerpt: 'Produced by FISSION'
     url: https://fission.codes
+    class: "text-center"
 split-pane-register:
   - first: >
       <h2>Would you like to pay with crypto?</h2>
@@ -82,11 +85,11 @@ split-pane-register:
 </div>
 
 
-<div class="content-block content-block--primary" id="agenda">
+<div class="content-block content-block--primary">
 
   <div class="wrapper">
 
-    <h2>Agenda</h2>
+    <h2 id="agenda">Agenda</h2>
 
     <p>We're working on our agenda and speakers. This will be a half day afternoon conference, with some drinks and networking to follow. The date of the event is <strong>August 29th, 2019</strong>.</p>
 
@@ -140,11 +143,13 @@ split-pane-register:
 
 </div>
 
-<div class="wrapper">
+<div class="wrapper" id="organizers">
 
-  <h2 id="organizers">Organizers</h2>
+  <h2>Organizers</h2>
 
-  {% include feature_row id="feature-presenting" %}
+  <div class="organizers-list">
+    {% include feature_row id="feature-presenting" %}
+  </div>
 
 </div>
 

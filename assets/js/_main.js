@@ -67,11 +67,13 @@ $(document).ready(function() {
 
   // Smooth scrolling
   var scroll = new SmoothScroll('a[href*="#"]', {
-    offset: 20,
+    offset: 149,
     speed: 400,
     speedAsDuration: true,
     durationMax: 500
   });
+
+  console.log('hey!')
 
   // Gumshoe scroll spy init
   if($("nav.toc").length > 0) {

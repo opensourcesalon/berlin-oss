@@ -6,7 +6,8 @@
    Default button
    ========================================================================== */
 
-.btn {
+.btn,
+.tito-wrapper .tito-submit {
   /* default */
   display: inline-block;
   margin-bottom: 0.25em;
@@ -16,7 +17,7 @@
   text-decoration: none;
   text-transform: uppercase;
   border-width: 0;
-  border-radius: $border-radius;
+  border-radius: $border-radius !important;
   cursor: pointer;
 
   .icon {
@@ -30,7 +31,7 @@
   /* button colors */
   $buttoncolors:
   (primary, $primary-color),
-  (inverse, #fff),
+  (inverse, $info-color),
   (light-outline, transparent),
   (success, $success-color),
   (warning, $warning-color),
@@ -92,5 +93,14 @@
   /* small button */
   &--small {
     font-size: $type-size-7;
+  }
+}
+
+.tito-wrapper .tito-submit-wrapper > .tito-submit {
+  background: $primary-color !important;
+  border: 0 !important;
+  &:hover,
+  &:focus {
+    background-color: darken($primary-color, 3%) !important;
   }
 }

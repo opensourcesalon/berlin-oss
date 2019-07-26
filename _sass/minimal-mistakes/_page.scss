@@ -561,3 +561,33 @@
     margin: 1em 0;
   }
 }
+
+/* 
+   Organizers list
+   ========================================================================== */
+
+.organizers-list .feature__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2em;
+  .feature__item {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    .archive__item,
+    .archive__item-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .archive__item-body {
+      flex: 1 1 auto;
+      justify-content: space-between;
+    }
+    .archive__item-teaser {
+      position: relative;
+      margin-bottom: 2em;
+    }
+  }
+}

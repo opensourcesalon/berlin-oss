@@ -222,6 +222,7 @@
    ========================================================================== */
 
 .feature__wrapper {
+  @include clearfix;
   .archive__item-title {
     margin-bottom: 0;
   }
@@ -510,5 +511,33 @@
     @include breakpoint($x-large) {
       padding-right: 0;
     }
+  }
+}
+
+/*
+   Tito
+   ========================================================================== */
+
+.wrapper {
+  .tito-wrapper {
+    background: none;
+    border: 0;
+    font-family: $sans-serif;
+    max-width: $max-width;
+    padding: 0;
+  }
+  .tito-badge-link {
+    margin: 1rem;
+  }
+  .tito-ticket.row,
+  .tito-submit-wrapper,
+  .tito-discount-code {
+    margin: 0 !important;
+  }
+  .tito-ticket-name {
+    font-size: 1.125em;
+  }
+  .tito-ticket-description {
+    font-size: 0.75em;
   }
 }

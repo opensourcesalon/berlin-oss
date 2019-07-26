@@ -5,6 +5,9 @@
 .masthead {
   background: $primary-color;
   position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
