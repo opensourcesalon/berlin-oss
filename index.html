@@ -82,11 +82,11 @@ split-pane-register:
 </div>
 
 
-<div class="content-block content-block--primary">
+<div class="content-block content-block--primary" id="agenda">
 
   <div class="wrapper">
 
-    <h2 id="agenda">Agenda</h2>
+    <h2>Agenda</h2>
 
     <p>We're working on our agenda and speakers. This will be a half day afternoon conference, with some drinks and networking to follow. The date of the event is <strong>August 29th, 2019</strong>.</p>
 
@@ -103,7 +103,7 @@ split-pane-register:
       <tbody>
         <tr>
           <td>14:00</td>
-          <td>Registration & Check-in</td>
+          <td class="highlight">Registration & Check-in</td>
           <td></td>
         </tr>
         <tr>
@@ -113,7 +113,7 @@ split-pane-register:
         </tr>
         <tr>
           <td>16:15</td>
-          <td>Lemonade Break</td>
+          <td class="highlight">Lemonade Break</td>
           <td></td>
         </tr>
         <tr>
@@ -123,12 +123,12 @@ split-pane-register:
         </tr>
         <tr>
           <td>18:45</td>
-          <td>Drinks, Snacks, & Networking</td>
+          <td class="highlight">Drinks, Snacks, & Networking</td>
           <td></td>
         </tr>
         <tr>
           <td>20:00</td>
-          <td>Open Space, all are welcome until 23:00</td>
+          <td class="highlight">Open Space, all are welcome until 23:00</td>
           <td></td>
         </tr>
       </tbody>
@@ -148,9 +148,11 @@ split-pane-register:
 
 </div>
 
-<div class="wrapper">
-  <h2 id="register">Register</h2>
-  <tito-widget event="open-source-salon/berlin2019"></tito-widget>
-</div>
+<section id="register">
+  <div class="wrapper">
+    <h2>Register</h2>
+    <tito-widget event="open-source-salon/berlin2019"></tito-widget>
+  </div>
 
   {% include split-pane.html id="split-pane-register" %}
+</section>
