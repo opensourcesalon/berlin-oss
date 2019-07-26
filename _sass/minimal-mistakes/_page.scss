@@ -544,7 +544,9 @@
   margin: 1em 0;
   @include clearfix;
   img {
-    float: left;
+    @include breakpoint($medium) {
+      float: left;
+    }
     margin: 0 2em 1em 0;
     width: 240px;
   }
