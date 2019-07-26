@@ -3,8 +3,8 @@
    ========================================================================== */
 
 .masthead {
+  background: $primary-color;
   position: relative;
-  border-bottom: 1px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
@@ -37,6 +37,7 @@
       text-decoration: none;
     }
   }
+
 }
 
 .site-logo img {
@@ -51,6 +52,8 @@
   align-self: center;
   font-weight: bold;
   z-index: 20;
+
+  display: none !important;
 }
 
 .masthead__menu {

@@ -177,13 +177,15 @@
   -ms-flex-align: center;
   align-items: center;
   min-height: $nav-height;
-  background: $background-color;
+  background: $primary-color;
 
   a {
     display: block;
     margin: 0 1rem;
     color: $masthead-link-color;
+    font-size: 0.875em;
     text-decoration: none;
+    text-transform: uppercase;
 
     &:hover {
       color: $masthead-link-color-hover;
@@ -197,6 +199,10 @@
     &.site-title {
       margin-left: 0;
     }
+  }
+
+  &__responsive-menu {
+    position: relative;
   }
 
   &__toggle {
@@ -256,14 +262,9 @@
     position: absolute;
     top: 100%;
     right: 0;
-    margin-top: 15px;
-    padding: 5px;
-    border: 1px solid $border-color;
+    margin-top: 0.5rem;
     border-radius: $border-radius;
-    background: $background-color;
-    -webkit-box-shadow: 0 2px 4px 0 rgba(#000, 0.16),
-      0 2px 10px 0 rgba(#000, 0.12);
-    box-shadow: 0 2px 4px 0 rgba(#000, 0.16), 0 2px 10px 0 rgba(#000, 0.12);
+    background: $info-color;
 
     &.hidden {
       display: none;
@@ -273,42 +274,28 @@
       margin: 0;
       padding: 10px 20px;
       font-size: $type-size-5;
+      color: $primary-color;
 
       &:hover {
-        color: $masthead-link-color-hover;
-        background: $navicon-link-color-hover;
+        color: darken($primary-color, 20%);
       }
     }
 
     &:before {
       content: "";
       position: absolute;
-      top: -11px;
-      right: 10px;
+      top: -10px;
+      right: 8px;
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: $border-color transparent;
+      border-color: $info-color transparent;
       display: block;
       z-index: 0;
     }
 
-    &:after {
-      content: "";
-      position: absolute;
-      top: -10px;
-      right: 10px;
-      width: 0;
-      border-style: solid;
-      border-width: 0 10px 10px;
-      border-color: $background-color transparent;
-      display: block;
-      z-index: 1;
-    }
-
     li {
       display: block;
-      border-bottom: 1px solid $border-color;
 
       &:last-child {
         border-bottom: none;

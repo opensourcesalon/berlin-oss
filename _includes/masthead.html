@@ -32,11 +32,18 @@
           </svg>
         </button>
         {% endif %}
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
-          <div class="navicon"></div>
-        </button>
-        <ul class="hidden-links hidden"></ul>
+        <div class="greedy-nav__responsive-menu">
+          <button class="greedy-nav__toggle hidden" type="button">
+            <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
+            <div class="navicon"></div>
+          </button>
+          <ul class="hidden-links hidden"></ul>
+        </div>
+        <ul>
+          <li>
+            <a href="#register" class="btn btn--light-outline">Register</a>
+          </li>
+        </ul>
       </nav>
     </div>
   </div>

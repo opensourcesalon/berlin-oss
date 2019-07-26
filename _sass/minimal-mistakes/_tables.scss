@@ -3,11 +3,10 @@
    ========================================================================== */
 
 table {
-  display: block;
   margin-bottom: 1em;
-  width: 100%;
   font-family: $global-font-family;
   font-size: $type-size-6;
+  width: 100%;
   border-collapse: collapse;
   overflow-x: auto;
 
@@ -30,6 +29,14 @@ th {
 td {
   padding: 0.5em;
   border-bottom: 1px solid mix(#000, $border-color, 25%);
+}
+
+td:empty::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 1px;
+  background-color: mix(#000, $border-color, 25%);
 }
 
 tr,

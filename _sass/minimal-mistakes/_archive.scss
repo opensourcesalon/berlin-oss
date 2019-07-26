@@ -222,10 +222,6 @@
    ========================================================================== */
 
 .feature__wrapper {
-  @include clearfix();
-  margin-bottom: 2em;
-  border-bottom: 1px solid $border-color;
-
   .archive__item-title {
     margin-bottom: 0;
   }
@@ -237,7 +233,6 @@
   font-size: 1.125em;
 
   @include breakpoint($small) {
-    float: left;
     margin-bottom: 0;
     width: span(4 of 12);
 
@@ -254,11 +249,6 @@
     &:nth-child(3n + 3) {
       clear: none;
       margin-left: gutter(of 12);
-    }
-
-    .feature__item-teaser {
-      max-height: 200px;
-      overflow: hidden;
     }
   }
 
@@ -278,20 +268,10 @@
 
   &--left {
     position: relative;
-    float: left;
     margin-left: 0;
     margin-right: 0;
     width: 100%;
-    clear: both;
     font-size: 1.125em;
-
-    .archive__item {
-      float: left;
-    }
-
-    .archive__item-teaser {
-      margin-bottom: 2em;
-    }
 
     a.btn::before {
       content: '';
@@ -302,17 +282,20 @@
       bottom: 0;
     }
 
-    @include breakpoint($small) {
-      .archive__item-teaser {
-        float: left;
-        width: span(5 of 12);
-      }
+    .archive__item-teaser,
+    .archive__item-body {
+      padding: 2rem;
+    }
 
+    @include breakpoint($medium) {
+      .archive__item {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+      }
       .archive__item-body {
-        float: right;
-        padding-left: gutter(0.5 of 12);
-        padding-right: gutter(1 of 12);
-        width: span(7 of 12);
+        padding: 4rem;
+        max-width: $max-width / 2;
       }
     }
   }
@@ -400,6 +383,99 @@
         width: span(7 of 12);
       }
     }
+  }
+
+  &--overlap {
+    .archive__item-teaser {
+      margin-top: -4rem;
+      @include breakpoint($medium) {
+        margin-top: -8rem;
+      }
+    }
+  }
+}
+
+/* 
+   Split panes
+   ========================================================================== */
+
+.split-pane {
+  @include split-pane;
+  @include breakpoint($medium) {
+    .split-pane__wrapper {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      margin: 0 auto;
+      max-width: $max-width;
+    }
+  }
+
+  .split-pane__item {
+    padding: 2rem;
+    
+    @include breakpoint($medium) {
+      padding: 4rem;
+      h3 {
+        font-size: $type-size-1;
+      }
+    }
+    
+    &:first-child {
+      background: $primary-color;
+      color: white;
+      h2 {
+        color: white;
+      }
+      a {
+        color: white;
+        &:hover,
+        &:focus {
+          color: darken(white, 20%);
+        }
+      }
+    }
+
+    &:last-child {
+      background: $info-color;
+      color: $primary-color;
+    }
+  }
+}
+
+/* 
+   Images with overlay
+   ========================================================================== */
+
+.image-with-overlay {
+  margin: 0;
+  position: relative;
+
+  img {
+    margin: 0;
+  }
+}
+
+.image-with-overlay__overlay {
+  background: $primary-color;
+  color: white;
+  padding: 2rem;
+  width: 100%;
+
+  @include breakpoint($medium) {
+    padding: 4rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+  }
+
+  h2 {
+    color: white;
+    margin-top: 1em;
+    font-size: $type-size-1;
+  }
+  p {
+    max-width: calc(#{$max-width / 2} - 4em);
   }
 }
 

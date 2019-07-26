@@ -4,19 +4,10 @@
 
 #main {
   @include clearfix;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1em;
-  padding-right: 1em;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
-  max-width: 100%;
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
-
-  @include breakpoint($x-large) {
-    max-width: $max-width;
-  }
 }
 
 .page {
@@ -63,15 +54,9 @@
 
 .page__lead {
   font-family: $global-font-family;
-  font-size: $type-size-4;
 }
 
 .page__content {
-  h2 {
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid $border-color;
-  }
-
   p,
   li,
   dl {
@@ -89,6 +74,11 @@
         margin-top: -($indent-var);
       }
     }
+  }
+
+  h2 {
+    color: $primary-color;
+    font-size: $type-size-1;
   }
 
   a:not(.btn) {
@@ -122,60 +112,70 @@
     margin-top: -1.5em;
     padding-left: 1.25rem;
   }
+
+  .wrapper {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 
 .page__hero {
   position: relative;
-  margin-bottom: 2em;
-  @include clearfix;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.25s;
   animation-delay: 0.25s;
 
+
   &--overlay {
     position: relative;
-    margin-bottom: 2em;
-    padding: 3em 0;
-    @include clearfix;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     -webkit-animation: $intro-transition;
     animation: $intro-transition;
     -webkit-animation-delay: 0.25s;
     animation-delay: 0.25s;
+    background: $info-color !important;
+    @include split-pane;
 
     a {
       color: #fff;
     }
 
     .wrapper {
-      padding-left: 1em;
-      padding-right: 1em;
-
-      @include breakpoint($x-large) {
-        max-width: $x-large;
+      @include breakpoint($medium) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: stretch;
+        justify-items: stretch;
+        @include breakpoint($x-large) {
+          max-width: $max-width;
+        }
+      }
+      > * {
+        padding: 8rem 1rem;
+        margin: 0;
       }
     }
 
-    .page__title,
     .page__meta,
     .page__lead,
     .btn {
-      color: #fff;
-      text-shadow: 1px 1px 4px rgba(#000, 0.5);
+      color: $primary-color;;
     }
 
-    .page__lead {
-      max-width: $medium;
+    @include breakpoint($medium) {
+      .page__lead {
+        padding-left: 4rem;
+        padding-right: 4rem;
+      }
     }
 
     .page__title {
+      background: $primary-color;
+      color: $info-color;
       font-size: $type-size-2;
 
       @include breakpoint($small) {
-        font-size: $type-size-1;
+        font-size: $type-size-1 * 1.5;
       }
     }
   }
@@ -209,6 +209,15 @@
   a {
     color: #fff;
     text-decoration: none;
+  }
+}
+
+.content-block--primary {
+  background: $primary-color;
+  color: white;
+  padding: 2em 0;
+  h2 {
+    color: white;
   }
 }
 
@@ -516,5 +525,37 @@
     @include breakpoint($x-large) {
       padding-right: 0;
     }
+  }
+}
+
+/* 
+   Speakers list
+   ========================================================================== */
+
+.speakers-list {
+  border-top: 4px solid $primary-color;
+  list-style: none;
+  margin: 0 0 4em;
+  padding: 0;
+}
+
+.speakers-list__speaker {
+  border-bottom: 2px solid $primary-color;
+  margin: 1em 0;
+  @include clearfix;
+  img {
+    float: left;
+    margin: 0 2em 1em 0;
+    width: 240px;
+  }
+
+  h3 {
+    color: $primary-color;
+    font-size: $type-size-4;
+    margin: 0;
+  }
+
+  h4 {
+    margin: 1em 0;
   }
 }

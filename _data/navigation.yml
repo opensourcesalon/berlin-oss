@@ -1,7 +1,5 @@
 # main links
 main:
-  - title: "Register"
-    url: /#register
   - title: "Venue"
     url: /#venue
   - title: "Speakers"
@@ -10,4 +8,3 @@ main:
     url: /#agenda
   - title: "Organizers"
     url: /#organizers
-  
